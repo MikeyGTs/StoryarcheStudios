@@ -661,7 +661,7 @@ h1, h2, h3, h4 {
    ABOUT PAGE — FULL SLATE ROSE THEME
    =========================== */
 .page-about {
-  background: #b5673d;
+  background: #3d7a6f;
   color: #f0f0f0;
 }
 
@@ -684,7 +684,7 @@ h1, h2, h3, h4 {
 
 .page-about .about-text .btn-primary {
   background: #ffffff;
-  color: #b5673d;
+  color: #3d7a6f;
 }
 
 .page-about .about-text .btn-primary:hover {
@@ -732,7 +732,7 @@ h1, h2, h3, h4 {
    CONTACT PAGE — FULL DUSTY NAVY THEME
    =========================== */
 .page-contact {
-  background: #3d7a6f;
+  background: #4a6fa5;
   color: #f0f0f0;
 }
 
@@ -791,13 +791,13 @@ h1, h2, h3, h4 {
 }
 
 .page-contact .form-group select option {
-  background: #3d7a6f;
+  background: #4a6fa5;
   color: #f0f0f0;
 }
 
 .page-contact .form-submit .btn {
   background: #ffffff;
-  color: #3d7a6f;
+  color: #4a6fa5;
 }
 
 .page-contact .form-submit .btn:hover {
