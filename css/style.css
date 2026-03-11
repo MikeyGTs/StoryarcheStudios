@@ -732,7 +732,7 @@ h1, h2, h3, h4 {
    CONTACT PAGE — FULL DUSTY NAVY THEME
    =========================== */
 .page-contact {
-  background: #4a5a7a;
+  background: #3d7a6f;
   color: #f0f0f0;
 }
 
@@ -791,13 +791,13 @@ h1, h2, h3, h4 {
 }
 
 .page-contact .form-group select option {
-  background: #4a5a7a;
+  background: #3d7a6f;
   color: #f0f0f0;
 }
 
 .page-contact .form-submit .btn {
   background: #ffffff;
-  color: #4a5a7a;
+  color: #3d7a6f;
 }
 
 .page-contact .form-submit .btn:hover {
