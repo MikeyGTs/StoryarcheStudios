@@ -211,6 +211,7 @@ h1, h2, h3, h4 {
   border: none;
   cursor: pointer;
   padding: 5px;
+  position: relative;
   z-index: 101;
 }
 
@@ -1345,10 +1346,26 @@ h1, h2, h3, h4 {
     display: flex;
   }
 
-  .nav-link {
+  /* Force dark text on mobile menu regardless of page theme */
+  .nav-links .nav-link {
     font-size: 1rem;
     letter-spacing: 0.1em;
     padding: 0.6rem 1.5rem;
+    color: var(--text-secondary);
+  }
+
+  .nav-links .nav-link:hover,
+  .nav-links .nav-link.active {
+    color: var(--text-primary);
+  }
+
+  .nav-links .nav-link.active {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Force hamburger spans dark when menu is open on dark pages */
+  .site-header--dark .nav-toggle.active span {
+    background: var(--text-primary);
   }
 
   .nav-toggle {

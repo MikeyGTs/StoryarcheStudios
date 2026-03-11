@@ -23,6 +23,8 @@
 
   function openMenu() {
     navLinks.classList.add('open');
+    navToggle.classList.add('active');
+    document.body.style.overflow = 'hidden';
     spans[0].style.transform = 'translateY(6px) rotate(45deg)';
     spans[1].style.opacity   = '0';
     spans[2].style.transform = 'translateY(-6px) rotate(-45deg)';
@@ -31,6 +33,8 @@
 
   function closeMenu() {
     navLinks.classList.remove('open');
+    navToggle.classList.remove('active');
+    document.body.style.overflow = '';
     spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
     navToggle.setAttribute('aria-expanded', 'false');
   }
