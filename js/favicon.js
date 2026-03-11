@@ -19,7 +19,7 @@
 
   // Pink "S"
   ctx.fillStyle = '#e05088';
-  ctx.font = 'bold 46px Manrope, sans-serif';
+  ctx.font = 'bold 46px Arial, sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText('S', size / 2, size / 2 + 2);
