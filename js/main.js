@@ -192,26 +192,48 @@
   const success = document.getElementById('form-success');
   if (!form) return;
 
-  form.addEventListener('submit', e => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const btnText   = submitBtn ? submitBtn.textContent : 'Send Message';
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
-    // Basic client-side validation
     const name    = form.querySelector('#name');
     const email   = form.querySelector('#email');
+    const subject = form.querySelector('#subject');
     const message = form.querySelector('#message');
 
     if (!name.value.trim() || !email.value.trim() || !message.value.trim()) return;
 
-    // Hide form, show success message
-    form.style.display = 'none';
-    if (success) success.classList.add('visible');
+    // Disable button while sending
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+    }
 
-    /*
-      NOTE: This form currently shows a success message client-side only.
-      To actually send emails you'll need a backend service. Options:
-        - Formspree:  change the <form> action to your Formspree endpoint
-        - Netlify Forms: add netlify attribute to the <form> tag
-        - EmailJS: integrate their SDK for client-side email sending
-    */
+    try {
+      const res = await fetch('/api/send-message', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.value.trim(),
+          email: email.value.trim(),
+          subject: subject ? subject.value : 'general',
+          message: message.value.trim(),
+        }),
+      });
+
+      if (!res.ok) throw new Error('Send failed');
+
+      // Hide form, show success message
+      form.style.display = 'none';
+      if (success) success.classList.add('visible');
+    } catch (err) {
+      alert('Something went wrong. Please try again or email us directly.');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = btnText;
+      }
+    }
   });
 })();

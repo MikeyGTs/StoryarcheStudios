@@ -729,6 +729,29 @@ h1, h2, h3, h4 {
 }
 
 /* ===========================
+   UNDER CONSTRUCTION
+   =========================== */
+.under-construction {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--nav-height) 2rem 4rem;
+}
+
+.under-construction .section-label {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.under-construction .page-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ===========================
    CONTACT PAGE — FULL DUSTY NAVY THEME
    =========================== */
 .page-contact {
