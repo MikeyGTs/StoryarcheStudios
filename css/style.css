@@ -286,7 +286,7 @@ h1, h2, h3, h4 {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: #f0f0f0;
+  color: #ffffff;
   padding: 0 2rem;
 }
 
@@ -294,7 +294,7 @@ h1, h2, h3, h4 {
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 1.5rem;
   font-weight: 400;
   background: rgba(255, 255, 255, 0.1);
@@ -339,7 +339,7 @@ h1, h2, h3, h4 {
 
 .hero-tagline {
   font-size: clamp(0.9rem, 2vw, 1.05rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.02em;
   margin-bottom: 2.5rem;
   max-width: 400px;
